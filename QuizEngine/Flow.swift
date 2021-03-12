@@ -12,7 +12,11 @@ protocol Router {
     associatedtype Answer
     
     func routeTo(question:Question, answerCallBack: @escaping (Answer) -> Void)
-    func routeTo(result:[Question: Answer])
+    func routeTo(result: Result<Question,Answer>)
+}
+
+struct Result <Question: Hashable, Answer>{
+    let answers: [Question: Answer]
 }
 
 class Flow <Question: Hashable, Answer, R: Router> where R.Question == Question, R.Answer == Answer{
@@ -29,7 +33,7 @@ class Flow <Question: Hashable, Answer, R: Router> where R.Question == Question,
         if let firstQuestion = questions.first {
             router.routeTo(question: firstQuestion, answerCallBack: nextCallBack(from: firstQuestion))
         } else {
-            router.routeTo(result: result)
+            router.routeTo(result: Result(answers: result))
         }
     }
     
@@ -47,7 +51,7 @@ class Flow <Question: Hashable, Answer, R: Router> where R.Question == Question,
                 let nextQuestion = questions[nextQuestionIndex]
                     router.routeTo(question: nextQuestion, answerCallBack: nextCallBack(from: nextQuestion))
             } else {
-                router.routeTo(result: result)
+                router.routeTo(result: Result(answers: result))
             }
 
         }
