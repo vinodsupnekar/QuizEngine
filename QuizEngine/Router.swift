@@ -4,10 +4,10 @@
 //
 //  Created by vinod supnekar on 12/03/21.
 //
-
+ 
 import Foundation
 
-protocol Router {
+public protocol Router {
     associatedtype Question: Hashable
     associatedtype Answer
     
