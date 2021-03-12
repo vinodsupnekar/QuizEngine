@@ -10,6 +10,8 @@
 		FA69688025B949E900E10876 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69687625B949E800E10876 /* QuizEngine.framework */; };
 		FA69689625B94E7200E10876 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69689525B94E7200E10876 /* FlowTest.swift */; };
 		FA69689A25B9600C00E10876 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69689925B9600C00E10876 /* Flow.swift */; };
+		FA6E8F3625FB4BB100A7EC88 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E8F3525FB4BB100A7EC88 /* Result.swift */; };
+		FA6E8F3A25FB4BDF00A7EC88 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E8F3925FB4BDF00A7EC88 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		FA69689425B94E7200E10876 /* QuizEngineTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuizEngineTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA69689525B94E7200E10876 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
 		FA69689925B9600C00E10876 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		FA6E8F3525FB4BB100A7EC88 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FA6E8F3925FB4BDF00A7EC88 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			children = (
 				FA69687A25B949E800E10876 /* Info.plist */,
 				FA69689925B9600C00E10876 /* Flow.swift */,
+				FA6E8F3525FB4BB100A7EC88 /* Result.swift */,
+				FA6E8F3925FB4BDF00A7EC88 /* Router.swift */,
 			);
 			path = QuizEngine;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6E8F3625FB4BB100A7EC88 /* Result.swift in Sources */,
+				FA6E8F3A25FB4BDF00A7EC88 /* Router.swift in Sources */,
 				FA69689A25B9600C00E10876 /* Flow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 65N2H53466;
+				"EXCLUDED_ARCHS[sdk=*]" = "Simulator - iOS 14.0 SDK arm64";
 				INFOPLIST_FILE = QuizEngineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
